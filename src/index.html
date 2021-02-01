@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Design</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=fallback"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- logo, nav -->
+      <div class="flexnav header__container">
+        <div class="logo">
+          <h3 class="logo__logo-title">FutureNews</h3>
+        </div>
+        <button
+          type="button"
+          class="burger__button"
+          aria-expanded="false"
+          aria-controls="header__menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобилного меню">
+            <use class="icon-burger" href="./images/sprite.svg#icon-menu"></use>
+            <use
+              class="icon__cross"
+              href="./images/sprite.svg#imenu-close"
+            ></use>
+          </svg>
+        </button>
+        <nav class="header__menu" id="header__menu" data-menu>
+          <ul class="list main-menu">
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Creative Studio</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">New Collections</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Nature Collections</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Modern interior places</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Chairs Trending</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Brands</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#" class="main-menu__focused">Sweet Home</a>
+            </li>
+            <li class="main-menu__item">
+              <a href="#contact" class="main-menu__focused">Contacts</a>
+            </li>
+          </ul>
+
+          <!-- шапка, контакты контакты не навигация!
+          <ul class="list main-menu contact">
+            <li class="contact__item">
+              <a href="mailto:info@devstudio.com" class="main-menu__focused contact__contact-link">
+                <svg class="contact__icon" width="16" height="11">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contact__item">
+              <a href="tel:+380961111111" class="main-menu__focused contact__contact-link">
+                <svg class="contact__icon" width="10" height="15">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul> -->
+        </nav>
+        <div class="main-menu"></div>
+        <!-- Разметка переключателя темы -->
+        <!-- <div class="light-theme">
+          <div class="toolbar">
+            <div class="theme-switch">
+              <svg
+                class="theme-switch__icon"
+                role="img"
+                aria-label="Иконка солнца"
+              >
+                <use href="./images/sprite.svg#sun"></use>
+              </svg>
+
+              <div class="theme-switch__control">
+                <input
+                  class="theme-switch__toggle"
+                  type="checkbox"
+                  name="theme"
+                  id="theme-switch-toggle"
+                  aria-label="Переключить между тёмной и светлой темой"
+                />
+                <label
+                  aria-hidden="true"
+                  class="theme-switch__track"
+                  for="theme-switch-toggle"
+                >
+                </label>
+                <div aria-hidden="true" class="theme-switch__marker"></div>
+              </div>
+
+              <svg class="theme-switch__icon" aria-label="Иконка луны">
+                <use href="./images/sprite.svg#moon"></use>
+              </svg>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </header>
+    <!-- тело
+    <main>
+      баннер -->
+    <!-- <section class="maxindented">
+        <div class="container">
+          <div class="block__text">
+            <h1 class="order__title">Create a new concepts</h1>
+            <p class="text">
+              Our aim is to make people who work in open-plan offices to be
+              happier and more effective accordingly.
+            </p>
+            <div class="main-menu">
+              <button type="button" class="button">view collection</button>
+              <button type="button" class="button">shop now</button>
+              <!--     background-image: linear-gradient(0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url(images/jh.jpg);
+    background-position: 50% 50%; -->
+    <!--     </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="simplesolution indented">
+        <div class="container">
+          <img
+            src="./images/hanging_chair.jpg"
+            alt="hanging chair"
+            width="420"
+            height="520"
+            srcset=""
+          />
+          <div>
+            <h2 class="title">Simple but very cozy</h2>
+            <p class="text">
+              Sed rhoncus egestas felis, sit amet condimentum sem ultricies at
+              malesuada, tortor sit amet.
+            </p>
+          </div>
+
+          <h3>Creative Studio</h3>
+          <p class="text">
+            Nulla imperdiet odio sit amet est vehicula condimentum congue dui
+            nec ipsum ullamcorper tristique.
+          </p>
+        </div>
+      </section>
+
+      <section class="newcollection indented">
+        <div class="container">
+          <h3 class="title">New Collection</h3>
+          <div class=""></div>
+          <p class="">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+            justo sagittis suscipit ultrices.
+          </p>
+          <img
+            src="./images/soft_chair.jpg"
+            alt="soft chair"
+            width="262"
+            height="289"
+            srcset=""
+          />
+          <img
+            src="./images/chair_MetalTweedMentos.jpg"
+            alt="chair Metal Tweed Mentos-color"
+            width="262"
+            height="289"
+            srcset=""
+          />
+          <img
+            src="./images/wooden_chair.jpg"
+            alt="wooden chair"
+            width="262"
+            height="289"
+            srcset=""
+          />
+        </div>
+      </section>
+      <section class="naturecollection indented">
+        <div class="container">
+          <h2>Nature Collections</h2>
+          <p class="text">
+            Celebrating nature’s formations. Taking inspiration from the organic
+            shapes, movements and sequential patterns that surround us
+          </p>
+          <img
+            src="./images/girl.jpg"
+            alt="girl"
+            width="380"
+            height="399"
+            srcset=""
+          />
+          <img
+            src="./images/3piece580x.jpg"
+            alt="3 piece"
+            width="380"
+            height="399"
+            srcset=""
+          />
+          <img
+            src="./images/armchair_corner.jpg"
+            alt="corner armchair"
+            width="380"
+            height="399"
+            srcset=""
+          />
+          <img
+            src="./images/rocking_chair_wooden.jpg"
+            alt="rocking chair wooden"
+            width="380"
+            height="399"
+            srcset=""
+          />
+          <img
+            src="./images/plywood_furniture.jpg"
+            alt="plywood furniture"
+            width="380"
+            height="399"
+            srcset=""
+          />
+          <img
+            src="./images/conceptional_armchair.jpg"
+            alt="conceptional armchair"
+            width="380"
+            height="399"
+            srcset=""
+          />
+        </div>
+      </section>
+
+      <section class="moderncollection indented">
+        <div class="container">
+          <h2 class="title">Modern interior places</h2>
+          <p class="text">
+            Phasellus scelerisque sed leo quis gravida. Fusce lobortis libero ut
+            arcu blandit pharetra.
+          </p>
+          <img
+            src="./images/wooden_chair.jpg"
+            alt="wooden chair"
+            width="242"
+            height="249"
+            srcset=""
+          />
+          <img
+            src="./images/wooden_chair_girl.jpg"
+            alt="wooden chair girl"
+            width="465"
+            height="465"
+            srcset=""
+          />
+        </div>
+      </section>
+
+      <section class="gallery indented">
+        <div class="container">
+          <img
+            src="./images/furniture__armchair3_2000x1240.jpg"
+            alt="furniture armchair"
+            width="570"
+            height="702"
+            srcset=""
+          />
+          <img
+            src="./images/rocking_chair.png"
+            alt="rocking chair"
+            width="285"
+            height="351"
+            srcset=""
+          />
+          <h2 class="title">Chairs Trending</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+            justo sagittis suscipit ultrices.
+          </p>
+          <h3>Practical spaces</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+            justo sagittis suscipit ultrices.
+          </p>
+          <img
+            src="./images/cups.jpg"
+            alt="cups"
+            width="285"
+            height="351"
+            srcset=""
+          />
+        </div>
+      </section>
+
+      <section class="brandos indented">
+        <h2 class="title__hidden">Брэнды (скрыть)</h2>
+        <ul class="list flexlist">
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo1.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo2.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo3.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo4.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo5.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+          <li class="element">
+            <a class="element__icon" href="#">
+              <img
+                src="./images/logo/Logo6.jpg"
+                alt="cups"
+                width="160"
+                height="160"
+                srcset=""
+              />
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="interior indented">
+        <h3 class="title">sweet home</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+          justo sagittis suscipit ultrices.
+        </p>
+        <img
+          src="./images/conceptional_modern_chair.jpg"
+          alt="conceptional modern chair"
+          width="285"
+          height="351"
+          srcset=""
+        />
+        <img
+          src="./images/cups.jpg"
+          alt="cups"
+          width="285"
+          height="351"
+          srcset=""
+        />
+        <img
+          src="./images/cups.jpg"
+          alt="cups"
+          width="285"
+          height="351"
+          srcset=""
+        />
+        <img
+          src="./images/cups.jpg"
+          alt="cups"
+          width="285"
+          height="351"
+          srcset=""
+        />
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container flexfooter">
+        <h6 class="title">Categories</h6>
+        <a href="#" class="">cycle news</a>
+        <a href="#" class="">Test Drives</a>
+        <a href="#" class="">car's reviews</a>
+        <a href="#" class="">videos</a>
+      </div>
+      <div class="container flexfooter">
+        <div class="">
+          <h6 class="">Links</h6>
+          <a href="#" class="">About Us</a>
+          <a href="#" class="">Contact Us</a>
+          <a href="#" class="">Cookie</a>
+          <a href="#" class="">RSS</a>
+        </div>
+      </div>
+      <div class="container flexfooter">
+        <div class="">
+          <h6 class="">Stay Connected with Us</h6>
+          <p class="">Become our friend on Facebook, Twitter or Google Plus!</p>
+          <div class="footer-sociallinks">
+            <ul class="list soclink__items">
+              <li class="soclink__element">
+                <a class="soclink__icon" href="#">
+                  <svg width="25" height="25">
+                    <use href="./images/sprite.svg#icon-facebook2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soclink__element">
+                <a class="soclink__icon" href="#">
+                  <svg width="25" height="25">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soclink__element">
+                <a class="soclink__icon" href="#">
+                  <svg width="25" height="25">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soclink__element">
+                <a class="soclink__icon" href="#">
+                  <svg width="25" height="25">
+                    <use href="./images/sprite.svg#icon-google-plus3"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soclink__element">
+                <a class="soclink__icon" href="#">
+                  <svg width="25" height="25">
+                    <use href="./images/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="">
+          <div class="">
+            <p class="">
+              © 22018 MotocycleNews. All Rights &amp; Images reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>-->
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
