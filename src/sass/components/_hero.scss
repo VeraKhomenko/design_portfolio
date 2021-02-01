@@ -1,0 +1,94 @@
+.maxindented {
+  max-width: 1600px;
+  height: 570px;
+  margin-bottom: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $primary-color;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  @include breakpoint(mobile-max) {
+    background-size: cover;
+    background-image: url(../src/images/jh.jpg);
+
+    // @include breakpoint(mobile-max-2x) {
+    //   & {
+    //     background-image: url(../src/images/jh.jpg);
+    //   }
+    // }
+  }
+
+  //   @include breakpoint(tablet-onle) {
+  //     background-size: cover;
+
+  //     & {
+  //       background-image: linear-gradient(
+  //           to right,
+  //           $linear-gradient,
+  //           $linear-gradient
+  //         ),
+  //         url(../images/tablet/tabbunner.jpg);
+  //     }
+
+  //     @include breakpoint(tablet-onle-2x) {
+  //       & {
+  //         background-image: linear-gradient(
+  //             to right,
+  //             $linear-gradient,
+  //             $linear-gradient
+  //           ),
+  //           url(../images/tablet/tabbunner@2x.jpg);
+  //       }
+  //     }
+  //   }
+
+  @include breakpoint(desktop) {
+    background-size: cover;
+    background-image: url(../src/images/jh.jpg);
+    height: 741px;
+    margin-bottom: 75px;
+
+    // @include breakpoint(desktop-bunner-2x) {
+    //   & {
+    //     height: 600px;
+    //     background-image: url(../src/images/jh.jpg);
+    //   }
+    // }
+  }
+
+  //   &__border {
+  //     border-top: 1px solid #ececec;
+  //   }
+}
+
+.block__text {
+  max-width: 480px;
+  height: 480px;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+
+  //   @include breakpoint(tablet) {
+  //     max-width: 360px;
+  //   }
+
+  //   @include breakpoint(desktop) {
+  //     max-width: 696px;
+  //     // height: 600px;
+  //     padding-top: 200px;
+  //     padding-bottom: 200px;
+  //   }
+}
+
+.order__title {
+  //   @include uppercase(0 auto 30px auto);
+  text-align: left;
+  @include font-title(0.03em, 700, 4.5rem, 1);
+
+  @include breakpoint(desktop) {
+    @include font-title(0.03em, 700, 3rem, 1);
+  }
+}

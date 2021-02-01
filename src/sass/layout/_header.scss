@@ -1,0 +1,240 @@
+.header__container {
+  @include indent($m: 0 auto 0 auto, $p: 0 15px 0 15px);
+  position: relative;
+  width: 100%;
+  height: 72px;
+  display: inline-block;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    max-width: 480px;
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+    max-width: 768px;
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+    height: 76px;
+    max-width: 1200px;
+  }
+}
+.logo {
+  // min-width: 134px;
+  text-align: start;
+
+  &__logo-title {
+    @include font-title(0.03em, 400, 1.87rem, 1.2);
+    display: inline-block;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-top: 0;
+    color: $opposite-text-color;
+
+    @include breakpoint(desktop) {
+      @include font-title(0.03em, 400, 1.5rem, 1.2);
+      display: inline-block;
+      padding-top: 22px;
+      padding-bottom: 22px;
+
+      // margin-bottom: 10px;
+    }
+  }
+}
+.header__menu {
+  @include font-size(0.02em, 500, 1.125rem, 1.167);
+  width: 100%;
+  display: none;
+
+  @include breakpoint(mobile-max) {
+    position: absolute;
+
+    max-width: 480px;
+    max-height: 393px;
+    top: 100%;
+    left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    border-top: 1px solid #ececec;
+    background-color: #fff;
+    z-index: 1;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+}
+
+.main-menu {
+  width: 100%;
+  display: none;
+  // @include breakpoint(mobile-max) {
+  //     width: 100%;
+  //     //  margin-bottom: 60px;
+  // }
+
+  @include breakpoint(tablet) {
+    margin-left: 88px;
+    // display: flex;
+  }
+
+  @include breakpoint(desktop) {
+    margin-left: 93px;
+    // display: flex;
+  }
+
+  &__focused {
+    // display: inline-flex;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+    color: $primary-color;
+    transition: color $time $time-function;
+
+    @include breakpoint(desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+// &__focused--current {
+//   position: relative;
+//   transition: color $time $time-function;
+// }
+
+// &__focused--current::after {
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+//   height: 4px;
+//   background: $accent-color;
+//   border-radius: 2px;
+
+//   @include breakpoint(mobile-max) {
+//     top: 32px;
+//   }
+
+//   @include breakpoint(tablet) {
+//     top: 45px;
+//   }
+
+//   @include breakpoint(desktop) {
+//     top: 77px;
+//   }
+// }
+
+// &__focused--current,
+.main-menu {
+  &__focused:hover,
+  &__focused:focus {
+    color: $background-accent-color;
+    fill: $background-accent-color;
+  }
+
+  &__item + &__item {
+    @include breakpoint(tablet) {
+      margin-left: 50px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-left: 50px;
+    }
+  }
+
+  &__item {
+    @include font-size(0.02em, 500, 1.125rem, 1.167);
+    width: auto;
+    margin-bottom: 40px;
+
+    @include breakpoint(tablet) {
+      @include font-size(0.02em, 500, 0.875rem, 1.142);
+      margin-bottom: 0;
+    }
+  }
+}
+// .contact {
+//   display: block;
+
+//   &__item + &__item {
+//     @include breakpoint(mobile-max) {
+//       margin-top: 16px;
+//     }
+
+//     @include breakpoint(tablet) {
+//       margin-top: 10px;
+//     }
+
+//     @include breakpoint(desktop) {
+//       margin-left: 30px;
+//       margin-top: auto;
+//       flex-wrap: nowrap;
+//     }
+//   }
+
+//   &__item {
+//     // @include breakpoint(mobile-max) {
+//     //     display: flex;
+//     //     flex-wrap: wrap;
+//     //     justify-content: center;
+//     //     // margin-left: 84px;
+//     //     //  padding-bottom: 21px;
+//     //     //  padding-top: 21px;
+//     // }
+
+//     @include breakpoint(tablet) {
+//       @include font-size(0.02em, 500, 0.75rem, 1.166);
+//     }
+
+//     @include breakpoint(desktop) {
+//       @include font-size(0.02em, 500, 0.875rem, 1.142);
+//     }
+//   }
+
+//   &__contact-link {
+//     align-items: center;
+//     fill: $subtitle-text-color;
+//     color: $subtitle-text-color;
+//   }
+
+//   &__icon {
+//     margin-right: 10px;
+
+//     @include breakpoint(tablet) {
+//       margin-right: 8px;
+//       width: 14px;
+//       //    height: 10px;
+//     }
+
+//     @include breakpoint(desktop) {
+//       margin-right: 10px;
+//     }
+//   }
+
+//   @include breakpoint(tablet) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     margin-left: 84px;
+//     padding-bottom: 21px;
+//     padding-top: 21px;
+//   }
+
+//   @include breakpoint(desktop) {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: nowrap;
+//     align-items: center;
+//   }
+//

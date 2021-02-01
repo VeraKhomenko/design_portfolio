@@ -1,0 +1,84 @@
+body {
+  @include font-size();
+  //     font: normal 400 14px/1.71 'Roboto', 'Verdana', 'Tahoma', sans-serif;
+  // letter-spacing: 0.04em; костыль
+  background: $color-secondary;
+  color: $primary-color;
+}
+
+.main-content {
+  min-width: 1600px;
+  display: inline-flex;
+}
+
+.container {
+  @include indent($m: 0 auto 0 auto, $p: 0 15px 0 15px);
+
+  @include breakpoint(mobile) {
+    width: 480px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 768px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 1200px;
+  }
+}
+.flexlist {
+  display: flex;
+
+  @include breakpoint(mobile-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include breakpoint(mobile) {
+    display: inline-block;
+  }
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //margin: -15px;
+  }
+
+  @include breakpoint(desktop) {
+    display: flex;
+    // margin: -15px;
+  }
+}
+
+.flexnav {
+  display: flex;
+  align-items: center;
+}
+
+.indented {
+  padding-top: 60px;
+  // padding-bottom: 60px;
+
+  @include breakpoint(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.features {
+  padding-bottom: 60px;
+
+  @include breakpoint(desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.minindented {
+  padding-bottom: 35px;
+}
+
+address {
+  font-style: normal;
+}

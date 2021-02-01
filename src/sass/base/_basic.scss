@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+}
+
+.list {
+  /* font-size: 0; */
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px;
+}
+
+svg {
+  display: inline;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: color 150ms var(--timing-function),
+    background-color 150ms var(--timing-function);
+  background-color: var(--color-default);
+  color: var(--color-secondary);
+}
