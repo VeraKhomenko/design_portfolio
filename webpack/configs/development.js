@@ -9,18 +9,11 @@ module.exports = env => ({
   module: {
     rules: [
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          'url-loader?limit=10000',
-          'img-loader'
-        ]
-      },
-      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader?url=false', 'postcss-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
